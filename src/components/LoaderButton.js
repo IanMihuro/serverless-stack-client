@@ -4,6 +4,8 @@ import "./LoaderButton.css";
 
 export default function LoaderButton({
     isLoading,
+    text,
+    loadingText,
     className = "",
     disabled = false,
     ...props
@@ -15,6 +17,7 @@ export default function LoaderButton({
             {...props}
         >
             {isLoading && <Glyphicon glyph="refresh" className="spinning" />}
+            {!isLoading ? text : loadingText}
             {props.children}
         </Button>
     );
