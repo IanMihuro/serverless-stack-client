@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Login.css';
 import LoaderButton from '../components/LoaderButton';
 
@@ -48,6 +49,7 @@ export default function Login(props) {
                     value={password}
                     onChange={e => setPassword(e.target.value)} />
                 </FormGroup>
+                <Link to="/login/reset">Forgot password?</Link>
                 <LoaderButton
                     block
                     bsSize="large"
